@@ -1,0 +1,40 @@
+name: Scan on file upload
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.py'
+      - '**.js'
+      - '**.yml'
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect changed files
+        id: changed
+        uses: tj-actions/changed-files@v44
+        with:
+          separator: ","
+
+      - name: Setup Python
+        if: steps.changed.outputs.any_changed == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run scan
+        if: steps.changed.outputs.any_changed == 'true'
+        env:
+          ADDED: ${{ steps.changed.outputs.added_files }}
+          MODIFIED: ${{ steps.changed.outputs.modified_files }}
+        run: |
+          echo "নতুন ফাইল: $ADDED"
+          echo "পরিবর্তিত ফাইল: $MODIFIED"
+          python scan.py --added "$ADDED" --modified "$MODIFIED"
