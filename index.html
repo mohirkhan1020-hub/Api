@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="60 free browser tools: OCR, PDF, image, QR, text, calculators and utilities. 100% client-side, nothing uploaded, works offline.">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="referrer" content="no-referrer">
+  <title>All-in-One Tools — 60 Free Browser Tools</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="All-in-One Tools — 60 Free Browser Tools">
+  <meta property="og:description" content="60 free browser tools: OCR, PDF, image, QR, text, calculators and utilities. 100% client-side.">
+  <meta property="og:image" content="https://www.idcardscannerpro.com/og.png">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://www.idcardscannerpro.com">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Libraries (deferred; heavy engines lazy-loaded by script.js when needed) -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.2.0/crypto-js.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.2/dist/browser-image-compression.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="btn btn-ghost menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <a class="logo" href="#home" aria-label="All-in-One Tools home">
+        <i class="fa-solid fa-toolbox" aria-hidden="true"></i>
+        <span>All-in-One Tools</span>
+      </a>
+
+      <div class="search-wrap" role="search">
+        <label class="visually-hidden" for="tool-search">Search tools</label>
+        <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+        <input type="search" id="tool-search" class="search-input" placeholder="Search 60 tools…" autocomplete="off" aria-describedby="search-hint">
+        <span id="search-hint" class="visually-hidden">Type to filter tools by name</span>
+      </div>
+
+      <nav id="main-nav" class="main-nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#tool-ocr">Scanner</a>
+        <a href="#tool-pdf-merge">PDF</a>
+        <a href="#tool-image-compress">Image</a>
+        <a href="#tool-qr-gen">QR</a>
+      </nav>
+
+      <button class="btn btn-ghost theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- HOME -->
+    <section id="home" class="view active" aria-labelledby="home-title">
+      <div class="hero">
+        <h1 id="home-title">60 Free Tools. <span class="accent">Zero Uploads.</span></h1>
+        <p class="hero-sub">OCR, PDF, image, QR, text, calculators &amp; utilities — all running privately in your browser. No servers, no accounts, no data leaves your device.</p>
+        <div class="hero-actions">
+          <a href="#tool-ocr" class="btn btn-primary"><i class="fa-solid fa-id-card" aria-hidden="true"></i> Scan an ID</a>
+          <a href="#tool-pdf-merge" class="btn btn-secondary"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Merge PDFs</a>
+        </div>
+      </div>
+
+      <div class="grid-toolbar">
+        <p id="grid-count" class="muted" aria-live="polite">Showing 60 tools</p>
+      </div>
+
+      <div class="tools-grid" id="tools-grid" role="list">
+        <!-- 60 cards injected by script.js -->
+      </div>
+      <p id="no-results" class="no-results" hidden>No tools match your search.</p>
+    </section>
+
+    <!-- Tool sections injected by Steps 2-4 -->
+        <!-- ═══════════ GROUP A — ID / DOCUMENT ═══════════ -->
+
+    <!-- 01 OCR -->
+    <section id="tool-ocr" class="view tool" aria-labelledby="tool-ocr-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-ocr-title" class="tool-title"><i class="fa-solid fa-id-card" aria-hidden="true"></i> ID Card Scanner (OCR)</h2>
+      <details class="how"><summary>How to use</summary><p>Upload an image (JPG/PNG/WebP) or PDF of an ID. The OCR engine reads the text, which you can then edit, copy or download as .txt. First run downloads the OCR language model (~10 MB).</p></details>
+      <div class="tool-body">
+        <div class="field">
+          <label for="inp-ocr-file">Image or PDF</label>
+          <input type="file" id="inp-ocr-file" accept="image/*,application/pdf">
+        </div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-ocr-run"><i class="fa-solid fa-play" aria-hidden="true"></i> Extract text</button>
+          <button class="btn btn-secondary" id="btn-ocr-reset">Reset</button>
+        </div>
+        <div class="progress" id="prog-ocr" hidden><div class="progress-bar"></div><span class="progress-label">0%</span></div>
+        <canvas id="canvas-ocr" class="preview-canvas" hidden></canvas>
+        <div class="field">
+          <label for="out-ocr-text">Extracted text (editable)</label>
+          <textarea id="out-ocr-text" rows="8" aria-live="polite"></textarea>
+        </div>
+        <div class="row">
+          <button class="btn btn-secondary" id="btn-ocr-copy"><i class="fa-regular fa-copy" aria-hidden="true"></i> Copy</button>
+          <button class="btn btn-secondary" id="btn-ocr-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download .txt</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 Passport Photo -->
+    <section id="tool-passport" class="view tool" aria-labelledby="tool-passport-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-passport-title" class="tool-title"><i class="fa-solid fa-passport" aria-hidden="true"></i> Passport Photo Maker</h2>
+      <details class="how"><summary>How to use</summary><p>Upload a photo, choose a size, optionally replace the background colour, then download a JPG at 300 DPI.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-passport-file">Photo</label><input type="file" id="inp-passport-file" accept="image/*"></div>
+        <div class="field"><label for="sel-passport-size">Size</label>
+          <select id="sel-passport-size"><option value="35x45">35 × 45 mm</option><option value="2x2">2 × 2 in</option></select>
+        </div>
+        <div class="field"><label for="sel-passport-bg">Background</label>
+          <select id="sel-passport-bg"><option value="none">Keep original</option><option value="#ffffff">White</option><option value="#1e40af">Blue</option><option value="#cbd5e1">Gray</option></select>
+        </div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-passport-run">Generate</button>
+          <button class="btn btn-secondary" id="btn-passport-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-passport-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download JPG</button>
+        </div>
+        <canvas id="canvas-passport" class="preview-canvas"></canvas>
+      </div>
+    </section>
+
+    <!-- 03 Aadhaar -->
+    <section id="tool-aadhaar" class="view tool" aria-labelledby="tool-aadhaar-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-aadhaar-title" class="tool-title"><i class="fa-solid fa-address-card" aria-hidden="true"></i> Aadhaar Card Text Extractor</h2>
+      <details class="how"><summary>How to use</summary><p>Upload front and back images. Text is OCR'd then regex-parsed into Name, Aadhaar number, DOB, Gender and Address.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-aadhaar-front">Front image</label><input type="file" id="inp-aadhaar-front" accept="image/*"></div>
+        <div class="field"><label for="inp-aadhaar-back">Back image</label><input type="file" id="inp-aadhaar-back" accept="image/*"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-aadhaar-run">Extract</button>
+          <button class="btn btn-secondary" id="btn-aadhaar-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-aadhaar-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download .txt</button>
+        </div>
+        <div class="progress" id="prog-aadhaar" hidden><div class="progress-bar"></div><span class="progress-label">0%</span></div>
+        <div class="field"><label for="out-aadhaar">Structured output</label><textarea id="out-aadhaar" rows="10" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+
+    <!-- 04 PAN -->
+    <section id="tool-pan" class="view tool" aria-labelledby="tool-pan-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-pan-title" class="tool-title"><i class="fa-solid fa-id-badge" aria-hidden="true"></i> PAN Card Text Extractor</h2>
+      <details class="how"><summary>How to use</summary><p>Upload a PAN card image. Extracts PAN number (validated against format ABCDE1234F), Name, Father's Name and DOB.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-pan-file">PAN card image</label><input type="file" id="inp-pan-file" accept="image/*"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-pan-run">Extract</button>
+          <button class="btn btn-secondary" id="btn-pan-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-pan-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download .txt</button>
+        </div>
+        <div class="progress" id="prog-pan" hidden><div class="progress-bar"></div><span class="progress-label">0%</span></div>
+        <div class="field"><label for="out-pan">Structured output</label><textarea id="out-pan" rows="8" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+
+    <!-- 05 Driving License -->
+    <section id="tool-dl" class="view tool" aria-labelledby="tool-dl-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-dl-title" class="tool-title"><i class="fa-solid fa-car" aria-hidden="true"></i> Driving License Scanner</h2>
+      <details class="how"><summary>How to use</summary><p>Upload a DL image. Extracts DL number, Name, DOB, Validity and Address.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-dl-file">DL image</label><input type="file" id="inp-dl-file" accept="image/*"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-dl-run">Extract</button>
+          <button class="btn btn-secondary" id="btn-dl-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-dl-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download .txt</button>
+        </div>
+        <div class="progress" id="prog-dl" hidden><div class="progress-bar"></div><span class="progress-label">0%</span></div>
+        <div class="field"><label for="out-dl">Structured output</label><textarea id="out-dl" rows="8" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+
+    <!-- 06 Voter ID -->
+    <section id="tool-voter" class="view tool" aria-labelledby="tool-voter-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-voter-title" class="tool-title"><i class="fa-solid fa-check-to-slot" aria-hidden="true"></i> Voter ID Scanner</h2>
+      <details class="how"><summary>How to use</summary><p>Upload a Voter ID (EPIC) image. Extracts EPIC number, Name, Age, Gender and Address.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-voter-file">Voter ID image</label><input type="file" id="inp-voter-file" accept="image/*"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-voter-run">Extract</button>
+          <button class="btn btn-secondary" id="btn-voter-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-voter-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download .txt</button>
+        </div>
+        <div class="progress" id="prog-voter" hidden><div class="progress-bar"></div><span class="progress-label">0%</span></div>
+        <div class="field"><label for="out-voter">Structured output</label><textarea id="out-voter" rows="8" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+
+    <!-- 07 Business Card -->
+    <section id="tool-bizcard" class="view tool" aria-labelledby="tool-bizcard-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-bizcard-title" class="tool-title"><i class="fa-solid fa-address-book" aria-hidden="true"></i> Business Card Scanner</h2>
+      <details class="how"><summary>How to use</summary><p>Upload a business card image. Extracts Name, Company, Phone, Email and Website into contact-style output.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-bizcard-file">Business card image</label><input type="file" id="inp-bizcard-file" accept="image/*"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-bizcard-run">Extract</button>
+          <button class="btn btn-secondary" id="btn-bizcard-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-bizcard-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download .txt</button>
+        </div>
+        <div class="progress" id="prog-bizcard" hidden><div class="progress-bar"></div><span class="progress-label">0%</span></div>
+        <div class="field"><label for="out-bizcard">Structured output</label><textarea id="out-bizcard" rows="8" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+
+    <!-- 08 Multi-page scan -->
+    <section id="tool-multiscan" class="view tool" aria-labelledby="tool-multiscan-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-multiscan-title" class="tool-title"><i class="fa-solid fa-copy" aria-hidden="true"></i> Multi-Page Document Scanner</h2>
+      <details class="how"><summary>How to use</summary><p>Select multiple images at once (in page order). Each is auto-contrasted and combined into one multi-page PDF.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-multiscan-files">Images (multiple)</label><input type="file" id="inp-multiscan-files" accept="image/*" multiple></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-multiscan-run">Build PDF</button>
+          <button class="btn btn-secondary" id="btn-multiscan-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-multiscan-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF</button>
+        </div>
+        <p class="muted" id="out-multiscan-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ═══════════ GROUP B — PDF ═══════════ -->
+
+    <!-- 09 Image to PDF -->
+    <section id="tool-img2pdf" class="view tool" aria-labelledby="tool-img2pdf-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-img2pdf-title" class="tool-title"><i class="fa-solid fa-image" aria-hidden="true"></i> Image to PDF</h2>
+      <details class="how"><summary>How to use</summary><p>Select multiple images; each becomes one PDF page. Choose page size A4, Letter or Fit.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-img2pdf-files">Images (multiple)</label><input type="file" id="inp-img2pdf-files" accept="image/*" multiple></div>
+        <div class="field"><label for="sel-img2pdf-size">Page size</label>
+          <select id="sel-img2pdf-size"><option value="a4">A4</option><option value="letter">Letter</option><option value="fit">Fit to image</option></select>
+        </div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-img2pdf-run">Create PDF</button>
+          <button class="btn btn-secondary" id="btn-img2pdf-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-img2pdf-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF</button>
+        </div>
+        <p class="muted" id="out-img2pdf-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 10 PDF to Image -->
+    <section id="tool-pdf2img" class="view tool" aria-labelledby="tool-pdf2img-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-pdf2img-title" class="tool-title"><i class="fa-solid fa-file-image" aria-hidden="true"></i> PDF to Image</h2>
+      <details class="how"><summary>How to use</summary><p>Upload a PDF; each page is rendered to PNG or JPG, previewed, and downloadable.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-pdf2img-file">PDF file</label><input type="file" id="inp-pdf2img-file" accept="application/pdf"></div>
+        <div class="field"><label for="sel-pdf2img-format">Format</label>
+          <select id="sel-pdf2img-format"><option value="png">PNG</option><option value="jpeg">JPG</option></select>
+        </div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-pdf2img-run">Render pages</button>
+          <button class="btn btn-secondary" id="btn-pdf2img-reset">Reset</button>
+        </div>
+        <div class="progress" id="prog-pdf2img" hidden><div class="progress-bar"></div><span class="progress-label">0%</span></div>
+        <div id="out-pdf2img-pages" class="pages-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 11 PDF Merge -->
+    <section id="tool-pdf-merge" class="view tool" aria-labelledby="tool-pdf-merge-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-pdf-merge-title" class="tool-title"><i class="fa-solid fa-object-group" aria-hidden="true"></i> PDF Merge</h2>
+      <details class="how"><summary>How to use</summary><p>Select two or more PDFs; they are merged in the order selected.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-pdf-merge-files">PDF files (multiple)</label><input type="file" id="inp-pdf-merge-files" accept="application/pdf" multiple></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-pdf-merge-run">Merge</button>
+          <button class="btn btn-secondary" id="btn-pdf-merge-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-pdf-merge-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <p class="muted" id="out-pdf-merge-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 12 PDF Split -->
+    <section id="tool-pdf-split" class="view tool" aria-labelledby="tool-pdf-split-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-pdf-split-title" class="tool-title"><i class="fa-solid fa-scissors" aria-hidden="true"></i> PDF Split</h2>
+      <details class="how"><summary>How to use</summary><p>Upload a PDF, then extract a page range (e.g. <code>1-3</code> or <code>2,4,6</code>) into a new PDF.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-pdf-split-file">PDF file</label><input type="file" id="inp-pdf-split-file" accept="application/pdf"></div>
+        <div class="field"><label for="inp-pdf-split-range">Page range</label><input type="text" id="inp-pdf-split-range" placeholder="e.g. 1-3 or 2,4,6"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-pdf-split-run">Split</button>
+          <button class="btn btn-secondary" id="btn-pdf-split-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-pdf-split-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <p class="muted" id="out-pdf-split-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 13 PDF Compress -->
+    <section id="tool-pdf-compress" class="view tool" aria-labelledby="tool-pdf-compress-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-pdf-compress-title" class="tool-title"><i class="fa-solid fa-compress" aria-hidden="true"></i> PDF Compress</h2>
+      <details class="how"><summary>How to use</summary><p>Re-renders each PDF page at reduced quality and rebuilds the file. Best for image-heavy PDFs.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-pdf-compress-file">PDF file</label><input type="file" id="inp-pdf-compress-file" accept="application/pdf"></div>
+        <div class="field"><label for="rng-pdf-compress">JPEG quality <span id="val-pdf-compress">60</span>%</label>
+          <input type="range" id="rng-pdf-compress" min="30" max="90" value="60"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-pdf-compress-run">Compress</button>
+          <button class="btn btn-secondary" id="btn-pdf-compress-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-pdf-compress-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <p class="muted" id="out-pdf-compress-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 14 PDF Rotate -->
+    <section id="tool-pdf-rotate" class="view tool" aria-labelledby="tool-pdf-rotate-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-pdf-rotate-title" class="tool-title"><i class="fa-solid fa-rotate" aria-hidden="true"></i> PDF Rotate</h2>
+      <details class="how"><summary>How to use</summary><p>Choose an angle and optionally a page range (blank = all pages).</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-pdf-rotate-file">PDF file</label><input type="file" id="inp-pdf-rotate-file" accept="application/pdf"></div>
+        <div class="field"><label for="sel-pdf-rotate-angle">Angle</label>
+          <select id="sel-pdf-rotate-angle"><option value="90">90°</option><option value="180">180°</option><option value="270">270°</option></select>
+        </div>
+        <div class="field"><label for="inp-pdf-rotate-range">Page range (blank = all)</label><input type="text" id="inp-pdf-rotate-range" placeholder="e.g. 1-3"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-pdf-rotate-run">Rotate</button>
+          <button class="btn btn-secondary" id="btn-pdf-rotate-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-pdf-rotate-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <p class="muted" id="out-pdf-rotate-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 15 PDF Page Delete -->
+    <section id="tool-pdf-delete" class="view tool" aria-labelledby="tool-pdf-delete-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-pdf-delete-title" class="tool-title"><i class="fa-solid fa-trash-can" aria-hidden="true"></i> PDF Page Delete</h2>
+      <details class="how"><summary>How to use</summary><p>Enter page numbers to remove (e.g. <code>2,4,7-9</code>). Remaining pages form a new PDF.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-pdf-delete-file">PDF file</label><input type="file" id="inp-pdf-delete-file" accept="application/pdf"></div>
+        <div class="field"><label for="inp-pdf-delete-pages">Pages to delete</label><input type="text" id="inp-pdf-delete-pages" placeholder="e.g. 2,4,7-9"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-pdf-delete-run">Delete pages</button>
+          <button class="btn btn-secondary" id="btn-pdf-delete-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-pdf-delete-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <p class="muted" id="out-pdf-delete-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 16 PDF Watermark -->
+    <section id="tool-pdf-watermark" class="view tool" aria-labelledby="tool-pdf-watermark-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-pdf-watermark-title" class="tool-title"><i class="fa-solid fa-droplet" aria-hidden="true"></i> PDF Watermark</h2>
+      <details class="how"><summary>How to use</summary><p>Type watermark text and set opacity. It is drawn diagonally on each page.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-pdf-watermark-file">PDF file</label><input type="file" id="inp-pdf-watermark-file" accept="application/pdf"></div>
+        <div class="field"><label for="inp-pdf-watermark-text">Watermark text</label><input type="text" id="inp-pdf-watermark-text" placeholder="CONFIDENTIAL"></div>
+        <div class="field"><label for="rng-pdf-watermark">Opacity <span id="val-pdf-watermark">30</span>%</label>
+          <input type="range" id="rng-pdf-watermark" min="5" max="90" value="30"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-pdf-watermark-run">Apply</button>
+          <button class="btn btn-secondary" id="btn-pdf-watermark-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-pdf-watermark-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <p class="muted" id="out-pdf-watermark-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 17 PDF Password -->
+    <section id="tool-pdf-protect" class="view tool" aria-labelledby="tool-pdf-protect-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-pdf-protect-title" class="tool-title"><i class="fa-solid fa-lock" aria-hidden="true"></i> PDF Password Protect</h2>
+      <details class="how"><summary>How to use</summary><p>Encrypts the PDF with a user password. Note: encryption requires a compatible library; if unavailable, a clear message is shown.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-pdf-protect-file">PDF file</label><input type="file" id="inp-pdf-protect-file" accept="application/pdf"></div>
+        <div class="field"><label for="inp-pdf-protect-pass">Password</label><input type="password" id="inp-pdf-protect-pass" autocomplete="new-password"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-pdf-protect-run">Protect</button>
+          <button class="btn btn-secondary" id="btn-pdf-protect-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-pdf-protect-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <p class="muted" id="out-pdf-protect-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 18 Text to PDF -->
+    <section id="tool-text2pdf" class="view tool" aria-labelledby="tool-text2pdf-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-text2pdf-title" class="tool-title"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Text to PDF</h2>
+      <details class="how"><summary>How to use</summary><p>Paste text or upload a .txt file. It is laid out with word-wrap into an A4 PDF.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-text2pdf-file">.txt file (optional)</label><input type="file" id="inp-text2pdf-file" accept=".txt,text/plain"></div>
+        <div class="field"><label for="inp-text2pdf-text">Or paste text</label><textarea id="inp-text2pdf-text" rows="8"></textarea></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-text2pdf-run">Create PDF</button>
+          <button class="btn btn-secondary" id="btn-text2pdf-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-text2pdf-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <p class="muted" id="out-text2pdf-status" aria-live="polite"></p>
+      </div>
+    </section>
+        <!-- ═══════════ GROUP C — IMAGE ═══════════ -->
+
+    <!-- 19 Image Compressor -->
+    <section id="tool-image-compress" class="view tool" aria-labelledby="tool-image-compress-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-image-compress-title" class="tool-title"><i class="fa-solid fa-compress" aria-hidden="true"></i> Image Compressor</h2>
+      <details class="how"><summary>How to use</summary><p>Upload an image and drag the quality slider. Use target-size mode to aim for a maximum file size in KB.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-image-compress-file">Image</label><input type="file" id="inp-image-compress-file" accept="image/*"></div>
+        <div class="field"><label for="rng-image-compress">Quality <span id="val-image-compress">70</span>%</label>
+          <input type="range" id="rng-image-compress" min="10" max="95" value="70"></div>
+        <div class="field"><label for="inp-image-compress-target">Target size (KB, optional)</label><input type="number" id="inp-image-compress-target" min="10" step="10" placeholder="e.g. 200"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-image-compress-run">Compress</button>
+          <button class="btn btn-secondary" id="btn-image-compress-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-image-compress-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <canvas id="canvas-image-compress" class="preview-canvas"></canvas>
+        <p class="muted" id="out-image-compress-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 20 Image Resizer -->
+    <section id="tool-image-resize" class="view tool" aria-labelledby="tool-image-resize-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-image-resize-title" class="tool-title"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i> Image Resizer</h2>
+      <details class="how"><summary>How to use</summary><p>Enter a width or height. With "lock aspect ratio" on, the other dimension updates automatically.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-image-resize-file">Image</label><input type="file" id="inp-image-resize-file" accept="image/*"></div>
+        <div class="row">
+          <div class="field"><label for="inp-image-resize-w">Width (px)</label><input type="number" id="inp-image-resize-w" min="1"></div>
+          <div class="field"><label for="inp-image-resize-h">Height (px)</label><input type="number" id="inp-image-resize-h" min="1"></div>
+        </div>
+        <div class="field checkbox"><input type="checkbox" id="chk-image-resize-lock" checked><label for="chk-image-resize-lock">Lock aspect ratio</label></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-image-resize-run">Resize</button>
+          <button class="btn btn-secondary" id="btn-image-resize-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-image-resize-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <canvas id="canvas-image-resize" class="preview-canvas"></canvas>
+      </div>
+    </section>
+
+    <!-- 21 Image Cropper -->
+    <section id="tool-image-crop" class="view tool" aria-labelledby="tool-image-crop-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-image-crop-title" class="tool-title"><i class="fa-solid fa-crop-simple" aria-hidden="true"></i> Image Cropper</h2>
+      <details class="how"><summary>How to use</summary><p>Choose a ratio, then drag the crop box on the preview. Click Crop to produce the output.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-image-crop-file">Image</label><input type="file" id="inp-image-crop-file" accept="image/*"></div>
+        <div class="field"><label for="sel-image-crop-ratio">Aspect ratio</label>
+          <select id="sel-image-crop-ratio"><option value="0">Free</option><option value="1">1:1</option><option value="1.7778">16:9</option><option value="0.75">3:4</option></select>
+        </div>
+        <div class="crop-stage"><canvas id="canvas-image-crop" class="preview-canvas"></canvas></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-image-crop-run">Crop</button>
+          <button class="btn btn-secondary" id="btn-image-crop-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-image-crop-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <canvas id="canvas-image-crop-out" class="preview-canvas" hidden></canvas>
+      </div>
+    </section>
+
+    <!-- 22 Image Rotator -->
+    <section id="tool-image-rotate" class="view tool" aria-labelledby="tool-image-rotate-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-image-rotate-title" class="tool-title"><i class="fa-solid fa-rotate" aria-hidden="true"></i> Image Rotator</h2>
+      <details class="how"><summary>How to use</summary><p>Rotate 90/180/270 degrees and flip horizontally or vertically.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-image-rotate-file">Image</label><input type="file" id="inp-image-rotate-file" accept="image/*"></div>
+        <div class="row">
+          <button class="btn btn-secondary" id="btn-image-rotate-90">Rotate 90°</button>
+          <button class="btn btn-secondary" id="btn-image-rotate-180">180°</button>
+          <button class="btn btn-secondary" id="btn-image-rotate-270">270°</button>
+          <button class="btn btn-secondary" id="btn-image-rotate-fliph">Flip H</button>
+          <button class="btn btn-secondary" id="btn-image-rotate-flipv">Flip V</button>
+        </div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-image-rotate-apply">Apply</button>
+          <button class="btn btn-secondary" id="btn-image-rotate-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-image-rotate-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <canvas id="canvas-image-rotate" class="preview-canvas"></canvas>
+      </div>
+    </section>
+
+    <!-- 23 Image Format Converter -->
+    <section id="tool-image-convert" class="view tool" aria-labelledby="tool-image-convert-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-image-convert-title" class="tool-title"><i class="fa-solid fa-right-left" aria-hidden="true"></i> Image Format Converter</h2>
+      <details class="how"><summary>How to use</summary><p>Convert between JPG, PNG and WebP. Quality applies to JPG/WebP.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-image-convert-file">Image</label><input type="file" id="inp-image-convert-file" accept="image/*"></div>
+        <div class="field"><label for="sel-image-convert-format">Output format</label>
+          <select id="sel-image-convert-format"><option value="image/jpeg">JPG</option><option value="image/png">PNG</option><option value="image/webp">WebP</option></select>
+        </div>
+        <div class="field"><label for="rng-image-convert">Quality <span id="val-image-convert">85</span>%</label>
+          <input type="range" id="rng-image-convert" min="10" max="100" value="85"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-image-convert-run">Convert</button>
+          <button class="btn btn-secondary" id="btn-image-convert-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-image-convert-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <canvas id="canvas-image-convert" class="preview-canvas"></canvas>
+      </div>
+    </section>
+
+    <!-- 24 Image to Base64 -->
+    <section id="tool-img2b64" class="view tool" aria-labelledby="tool-img2b64-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-img2b64-title" class="tool-title"><i class="fa-solid fa-code" aria-hidden="true"></i> Image to Base64</h2>
+      <details class="how"><summary>How to use</summary><p>Upload an image; its data URI is generated for copy or download as .txt.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-img2b64-file">Image</label><input type="file" id="inp-img2b64-file" accept="image/*"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-img2b64-run">Convert</button>
+          <button class="btn btn-secondary" id="btn-img2b64-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-img2b64-copy"><i class="fa-regular fa-copy" aria-hidden="true"></i> Copy</button>
+          <button class="btn btn-secondary" id="btn-img2b64-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download .txt</button>
+        </div>
+        <div class="field"><label for="out-img2b64">Base64 data URI</label><textarea id="out-img2b64" rows="6" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+
+    <!-- 25 Base64 to Image -->
+    <section id="tool-b64img" class="view tool" aria-labelledby="tool-b64img-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-b64img-title" class="tool-title"><i class="fa-solid fa-image" aria-hidden="true"></i> Base64 to Image</h2>
+      <details class="how"><summary>How to use</summary><p>Paste a base64 data URI (or raw base64). The image is decoded and previewed.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-b64img-text">Base64 data URI</label><textarea id="inp-b64img-text" rows="6" placeholder="data:image/png;base64,..."></textarea></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-b64img-run">Decode</button>
+          <button class="btn btn-secondary" id="btn-b64img-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-b64img-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <img id="img-b64img-preview" alt="Decoded preview" class="preview-img" hidden>
+      </div>
+    </section>
+
+    <!-- 26 Simple BG Remover -->
+    <section id="tool-bg-remove" class="view tool" aria-labelledby="tool-bg-remove-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-bg-remove-title" class="tool-title"><i class="fa-solid fa-eraser" aria-hidden="true"></i> Simple Background Remover</h2>
+      <details class="how"><summary>How to use</summary><p>Pick a background colour and adjust the threshold slider. Pixels within the colour distance become transparent.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-bg-remove-file">Image</label><input type="file" id="inp-bg-remove-file" accept="image/*"></div>
+        <div class="row">
+          <div class="field"><label for="inp-bg-remove-color">Background colour</label><input type="color" id="inp-bg-remove-color" value="#ffffff"></div>
+          <div class="field"><label for="rng-bg-remove">Threshold <span id="val-bg-remove">40</span></label><input type="range" id="rng-bg-remove" min="5" max="120" value="40"></div>
+        </div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-bg-remove-run">Remove</button>
+          <button class="btn btn-secondary" id="btn-bg-remove-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-bg-remove-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download PNG</button>
+        </div>
+        <canvas id="canvas-bg-remove" class="preview-canvas checker"></canvas>
+      </div>
+    </section>
+
+    <!-- 27 Image Watermark -->
+    <section id="tool-image-watermark" class="view tool" aria-labelledby="tool-image-watermark-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-image-watermark-title" class="tool-title"><i class="fa-solid fa-droplet" aria-hidden="true"></i> Image Watermark</h2>
+      <details class="how"><summary>How to use</summary><p>Type watermark text, choose position, opacity, and optionally tile it.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-image-watermark-file">Image</label><input type="file" id="inp-image-watermark-file" accept="image/*"></div>
+        <div class="field"><label for="inp-image-watermark-text">Watermark text</label><input type="text" id="inp-image-watermark-text" placeholder="© Your Name"></div>
+        <div class="row">
+          <div class="field"><label for="sel-image-watermark-pos">Position</label>
+            <select id="sel-image-watermark-pos"><option value="br">Bottom-right</option><option value="bl">Bottom-left</option><option value="tr">Top-right</option><option value="tl">Top-left</option><option value="center">Center</option></select>
+          </div>
+          <div class="field"><label for="rng-image-watermark">Opacity <span id="val-image-watermark">60</span>%</label><input type="range" id="rng-image-watermark" min="10" max="100" value="60"></div>
+        </div>
+        <div class="field checkbox"><input type="checkbox" id="chk-image-watermark-tile"><label for="chk-image-watermark-tile">Tile watermark</label></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-image-watermark-run">Apply</button>
+          <button class="btn btn-secondary" id="btn-image-watermark-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-image-watermark-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <canvas id="canvas-image-watermark" class="preview-canvas"></canvas>
+      </div>
+    </section>
+
+    <!-- 28 Grayscale -->
+    <section id="tool-grayscale" class="view tool" aria-labelledby="tool-grayscale-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-grayscale-title" class="tool-title"><i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i> Grayscale Converter</h2>
+      <details class="how"><summary>How to use</summary><p>Upload an image and click Convert to turn it grayscale.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-grayscale-file">Image</label><input type="file" id="inp-grayscale-file" accept="image/*"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-grayscale-run">Convert</button>
+          <button class="btn btn-secondary" id="btn-grayscale-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-grayscale-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</button>
+        </div>
+        <canvas id="canvas-grayscale" class="preview-canvas"></canvas>
+      </div>
+    </section>
+
+    <!-- 29 Image Color Picker -->
+    <section id="tool-image-color" class="view tool" aria-labelledby="tool-image-color-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-image-color-title" class="tool-title"><i class="fa-solid fa-eye-dropper" aria-hidden="true"></i> Image Color Picker</h2>
+      <details class="how"><summary>How to use</summary><p>Upload an image and click anywhere to sample the pixel colour. HEX and RGB values are shown.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-image-color-file">Image</label><input type="file" id="inp-image-color-file" accept="image/*"></div>
+        <canvas id="canvas-image-color" class="preview-canvas"></canvas>
+        <div class="color-readout" aria-live="polite">
+          <span class="swatch" id="swatch-image-color"></span>
+          <span id="out-image-color-hex">HEX: —</span>
+          <span id="out-image-color-rgb">RGB: —</span>
+        </div>
+        <div class="row">
+          <button class="btn btn-secondary" id="btn-image-color-reset">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 30 Image Metadata -->
+    <section id="tool-image-meta" class="view tool" aria-labelledby="tool-image-meta-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-image-meta-title" class="tool-title"><i class="fa-solid fa-info-circle" aria-hidden="true"></i> Image Metadata Viewer</h2>
+      <details class="how"><summary>How to use</summary><p>Upload an image to see basic metadata and any embedded EXIF tags that can be read client-side.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-image-meta-file">Image</label><input type="file" id="inp-image-meta-file" accept="image/*"></div>
+        <div class="row"><button class="btn btn-secondary" id="btn-image-meta-reset">Reset</button></div>
+        <div id="out-image-meta" class="kv-table" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 31 Passport Photo Grid -->
+    <section id="tool-passport-grid" class="view tool" aria-labelledby="tool-passport-grid-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-passport-grid-title" class="tool-title"><i class="fa-solid fa-table-cells" aria-hidden="true"></i> Passport Photo Grid</h2>
+      <details class="how"><summary>How to use</summary><p>Upload a passport photo; it's tiled 4/6/8 times on an A4 sheet for printing.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-passport-grid-file">Photo</label><input type="file" id="inp-passport-grid-file" accept="image/*"></div>
+        <div class="field"><label for="sel-passport-grid-count">Copies per A4</label>
+          <select id="sel-passport-grid-count"><option value="4">4</option><option value="6">6</option><option value="8">8</option></select>
+        </div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-passport-grid-run">Generate grid</button>
+          <button class="btn btn-secondary" id="btn-passport-grid-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-passport-grid-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF</button>
+        </div>
+        <canvas id="canvas-passport-grid" class="preview-canvas"></canvas>
+      </div>
+    </section>
+
+    <!-- ═══════════ GROUP D — QR / BARCODE ═══════════ -->
+
+    <!-- 32 QR Generator -->
+    <section id="tool-qr-gen" class="view tool" aria-labelledby="tool-qr-gen-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-qr-gen-title" class="tool-title"><i class="fa-solid fa-qrcode" aria-hidden="true"></i> QR Code Generator</h2>
+      <details class="how"><summary>How to use</summary><p>Choose text/URL, vCard, or WiFi. Set size and colours, then generate and download PNG.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="sel-qr-gen-type">Type</label>
+          <select id="sel-qr-gen-type"><option value="text">Text / URL</option><option value="vcard">vCard</option><option value="wifi">WiFi</option></select>
+        </div>
+        <div id="qr-gen-text-wrap">
+          <div class="field"><label for="inp-qr-gen-text">Text or URL</label><input type="text" id="inp-qr-gen-text" placeholder="https://example.com"></div>
+        </div>
+        <div id="qr-gen-vcard-wrap" hidden>
+          <div class="field"><label for="inp-qr-gen-name">Name</label><input type="text" id="inp-qr-gen-name"></div>
+          <div class="field"><label for="inp-qr-gen-org">Organisation</label><input type="text" id="inp-qr-gen-org"></div>
+          <div class="field"><label for="inp-qr-gen-tel">Phone</label><input type="text" id="inp-qr-gen-tel"></div>
+          <div class="field"><label for="inp-qr-gen-email">Email</label><input type="email" id="inp-qr-gen-email"></div>
+        </div>
+        <div id="qr-gen-wifi-wrap" hidden>
+          <div class="field"><label for="inp-qr-gen-ssid">SSID</label><input type="text" id="inp-qr-gen-ssid"></div>
+          <div class="field"><label for="inp-qr-gen-pass">Password</label><input type="text" id="inp-qr-gen-pass"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="inp-qr-gen-size">Size (px)</label><input type="number" id="inp-qr-gen-size" value="256" min="64" max="1024" step="32"></div>
+          <div class="field"><label for="inp-qr-gen-fg">Foreground</label><input type="color" id="inp-qr-gen-fg" value="#000000"></div>
+          <div class="field"><label for="inp-qr-gen-bg">Background</label><input type="color" id="inp-qr-gen-bg" value="#ffffff"></div>
+        </div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-qr-gen-run">Generate</button>
+          <button class="btn btn-secondary" id="btn-qr-gen-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-qr-gen-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download PNG</button>
+        </div>
+        <div id="out-qr-gen" class="qr-out" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 33 QR Scanner -->
+    <section id="tool-qr-scan" class="view tool" aria-labelledby="tool-qr-scan-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-qr-scan-title" class="tool-title"><i class="fa-solid fa-camera" aria-hidden="true"></i> QR Scanner</h2>
+      <details class="how"><summary>How to use</summary><p>Click Start to open your camera, point at a QR code; the result appears below. Requires camera permission.</p></details>
+      <div class="tool-body">
+        <div id="reader-qr-scan" class="scanner-box"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-qr-scan-start">Start camera</button>
+          <button class="btn btn-secondary" id="btn-qr-scan-stop">Stop</button>
+        </div>
+        <div class="field"><label for="out-qr-scan">Result</label><textarea id="out-qr-scan" rows="4" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+
+    <!-- 34 Barcode Generator -->
+    <section id="tool-barcode-gen" class="view tool" aria-labelledby="tool-barcode-gen-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-barcode-gen-title" class="tool-title"><i class="fa-solid fa-barcode" aria-hidden="true"></i> Barcode Generator</h2>
+      <details class="how"><summary>How to use</summary><p>Enter a value, pick Code128/EAN13/UPC, then generate and download PNG.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-barcode-gen-value">Value</label><input type="text" id="inp-barcode-gen-value" placeholder="123456789012"></div>
+        <div class="field"><label for="sel-barcode-gen-format">Format</label>
+          <select id="sel-barcode-gen-format"><option value="CODE128">Code128</option><option value="EAN13">EAN13</option><option value="UPC">UPC</option></select>
+        </div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-barcode-gen-run">Generate</button>
+          <button class="btn btn-secondary" id="btn-barcode-gen-reset">Reset</button>
+          <button class="btn btn-secondary" id="btn-barcode-gen-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download PNG</button>
+        </div>
+        <svg id="svg-barcode-gen" class="barcode-out" aria-live="polite"></svg>
+      </div>
+    </section>
+
+    <!-- 35 Barcode Scanner -->
+    <section id="tool-barcode-scan" class="view tool" aria-labelledby="tool-barcode-scan-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-barcode-scan-title" class="tool-title"><i class="fa-solid fa-camera-retro" aria-hidden="true"></i> Barcode Scanner</h2>
+      <details class="how"><summary>How to use</summary><p>Click Start to open your camera, then point at a barcode. The decoded value appears below.</p></details>
+      <div class="tool-body">
+        <div id="reader-barcode-scan" class="scanner-box"></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-barcode-scan-start">Start camera</button>
+          <button class="btn btn-secondary" id="btn-barcode-scan-stop">Stop</button>
+        </div>
+        <div class="field"><label for="out-barcode-scan">Result</label><textarea id="out-barcode-scan" rows="4" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+        <!-- ═══════════ GROUP E — TEXT ═══════════ -->
+
+    <!-- 36 Word Counter -->
+    <section id="tool-word-count" class="view tool" aria-labelledby="tool-word-count-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-word-count-title" class="tool-title"><i class="fa-solid fa-file-word" aria-hidden="true"></i> Word Counter</h2>
+      <details class="how"><summary>How to use</summary><p>Type or paste text; counts update live for words, characters, sentences and paragraphs.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-word-count">Text</label><textarea id="inp-word-count" rows="10"></textarea></div>
+        <div class="stats-grid" aria-live="polite">
+          <div class="stat"><span class="stat-num" id="stat-word-count-words">0</span><span class="stat-label">Words</span></div>
+          <div class="stat"><span class="stat-num" id="stat-word-count-chars">0</span><span class="stat-label">Chars</span></div>
+          <div class="stat"><span class="stat-num" id="stat-word-count-sentences">0</span><span class="stat-label">Sentences</span></div>
+          <div class="stat"><span class="stat-num" id="stat-word-count-paras">0</span><span class="stat-label">Paragraphs</span></div>
+        </div>
+        <div class="row"><button class="btn btn-secondary" id="btn-word-count-reset">Reset</button></div>
+      </div>
+    </section>
+
+    <!-- 37 Character Counter -->
+    <section id="tool-char-count" class="view tool" aria-labelledby="tool-char-count-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-char-count-title" class="tool-title"><i class="fa-solid fa-text-width" aria-hidden="true"></i> Character Counter</h2>
+      <details class="how"><summary>How to use</summary><p>Counts characters with and without spaces, and bytes (UTF-8).</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-char-count">Text</label><textarea id="inp-char-count" rows="10"></textarea></div>
+        <div class="stats-grid" aria-live="polite">
+          <div class="stat"><span class="stat-num" id="stat-char-count-with">0</span><span class="stat-label">With spaces</span></div>
+          <div class="stat"><span class="stat-num" id="stat-char-count-without">0</span><span class="stat-label">Without spaces</span></div>
+          <div class="stat"><span class="stat-num" id="stat-char-count-bytes">0</span><span class="stat-label">Bytes</span></div>
+        </div>
+        <div class="row"><button class="btn btn-secondary" id="btn-char-count-reset">Reset</button></div>
+      </div>
+    </section>
+
+    <!-- 38 Case Converter -->
+    <section id="tool-case" class="view tool" aria-labelledby="tool-case-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-case-title" class="tool-title"><i class="fa-solid fa-font" aria-hidden="true"></i> Case Converter</h2>
+      <details class="how"><summary>How to use</summary><p>Enter text and click any case button. The converted text replaces the input.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-case-text">Text</label><textarea id="inp-case-text" rows="6"></textarea></div>
+        <div class="row wrap">
+          <button class="btn btn-secondary" data-case="upper">UPPER</button>
+          <button class="btn btn-secondary" data-case="lower">lower</button>
+          <button class="btn btn-secondary" data-case="title">Title</button>
+          <button class="btn btn-secondary" data-case="sentence">Sentence</button>
+          <button class="btn btn-secondary" data-case="camel">camelCase</button>
+          <button class="btn btn-secondary" data-case="snake">snake_case</button>
+        </div>
+        <div class="row">
+          <button class="btn btn-secondary" id="btn-case-copy"><i class="fa-regular fa-copy" aria-hidden="true"></i> Copy</button>
+          <button class="btn btn-secondary" id="btn-case-reset">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 39 Text to Speech -->
+    <section id="tool-tts" class="view tool" aria-labelledby="tool-tts-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-tts-title" class="tool-title"><i class="fa-solid fa-volume-high" aria-hidden="true"></i> Text to Speech</h2>
+      <details class="how"><summary>How to use</summary><p>Type text, choose a voice, rate and pitch, then click Speak.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-tts-text">Text</label><textarea id="inp-tts-text" rows="6">Hello, this is a browser text-to-speech demo.</textarea></div>
+        <div class="field"><label for="sel-tts-voice">Voice</label><select id="sel-tts-voice"></select></div>
+        <div class="row">
+          <div class="field"><label for="rng-tts-rate">Rate <span id="val-tts-rate">1.0</span></label><input type="range" id="rng-tts-rate" min="0.5" max="2" step="0.1" value="1"></div>
+          <div class="field"><label for="rng-tts-pitch">Pitch <span id="val-tts-pitch">1.0</span></label><input type="range" id="rng-tts-pitch" min="0" max="2" step="0.1" value="1"></div>
+        </div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-tts-speak">Speak</button>
+          <button class="btn btn-secondary" id="btn-tts-stop">Stop</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 40 Speech to Text -->
+    <section id="tool-stt" class="view tool" aria-labelledby="tool-stt-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-stt-title" class="tool-title"><i class="fa-solid fa-microphone" aria-hidden="true"></i> Speech to Text</h2>
+      <details class="how"><summary>How to use</summary><p>Click Start, allow the microphone, and speak. Text appears as you talk. Requires a supported browser (Chrome/Edge).</p></details>
+      <div class="tool-body">
+        <div class="row">
+          <button class="btn btn-primary" id="btn-stt-start">Start</button>
+          <button class="btn btn-secondary" id="btn-stt-stop">Stop</button>
+          <button class="btn btn-secondary" id="btn-stt-clear">Clear</button>
+          <button class="btn btn-secondary" id="btn-stt-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download .txt</button>
+        </div>
+        <div class="field"><label for="out-stt">Transcript</label><textarea id="out-stt" rows="10" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+
+    <!-- 41 Remove Duplicate Lines -->
+    <section id="tool-dedupe" class="view tool" aria-labelledby="tool-dedupe-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-dedupe-title" class="tool-title"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Remove Duplicate Lines</h2>
+      <details class="how"><summary>How to use</summary><p>Paste lines, choose case sensitivity, then dedupe. Preserves first occurrence order.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-dedupe-text">Lines</label><textarea id="inp-dedupe-text" rows="8"></textarea></div>
+        <div class="field checkbox"><input type="checkbox" id="chk-dedupe-case"><label for="chk-dedupe-case">Case sensitive</label></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-dedupe-run">Dedupe</button>
+          <button class="btn btn-secondary" id="btn-dedupe-copy"><i class="fa-regular fa-copy" aria-hidden="true"></i> Copy</button>
+          <button class="btn btn-secondary" id="btn-dedupe-reset">Reset</button>
+        </div>
+        <div class="field"><label for="out-dedupe">Output</label><textarea id="out-dedupe" rows="8" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+
+    <!-- 42 Base64 Text -->
+    <section id="tool-b64-text" class="view tool" aria-labelledby="tool-b64-text-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-b64-text-title" class="tool-title"><i class="fa-solid fa-code" aria-hidden="true"></i> Base64 Encoder / Decoder</h2>
+      <details class="how"><summary>How to use</summary><p>UTF-8 safe encode/decode of text using Base64.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-b64-text">Input</label><textarea id="inp-b64-text" rows="6"></textarea></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-b64-text-encode">Encode</button>
+          <button class="btn btn-primary" id="btn-b64-text-decode">Decode</button>
+          <button class="btn btn-secondary" id="btn-b64-text-copy"><i class="fa-regular fa-copy" aria-hidden="true"></i> Copy</button>
+          <button class="btn btn-secondary" id="btn-b64-text-reset">Reset</button>
+        </div>
+        <div class="field"><label for="out-b64-text">Output</label><textarea id="out-b64-text" rows="6" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+
+    <!-- 43 URL Encode -->
+    <section id="tool-url" class="view tool" aria-labelledby="tool-url-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-url-title" class="tool-title"><i class="fa-solid fa-link" aria-hidden="true"></i> URL Encoder / Decoder</h2>
+      <details class="how"><summary>How to use</summary><p>Percent-encode or decode text with encodeURIComponent / decodeURIComponent.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-url-text">Input</label><textarea id="inp-url-text" rows="6"></textarea></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-url-encode">Encode</button>
+          <button class="btn btn-primary" id="btn-url-decode">Decode</button>
+          <button class="btn btn-secondary" id="btn-url-copy"><i class="fa-regular fa-copy" aria-hidden="true"></i> Copy</button>
+          <button class="btn btn-secondary" id="btn-url-reset">Reset</button>
+        </div>
+        <div class="field"><label for="out-url">Output</label><textarea id="out-url" rows="6" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+
+    <!-- 44 Lorem Ipsum -->
+    <section id="tool-lorem" class="view tool" aria-labelledby="tool-lorem-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-lorem-title" class="tool-title"><i class="fa-solid fa-paragraph" aria-hidden="true"></i> Lorem Ipsum Generator</h2>
+      <details class="how"><summary>How to use</summary><p>Generate lorem ipsum by paragraphs, sentences or words.</p></details>
+      <div class="tool-body">
+        <div class="row">
+          <div class="field"><label for="sel-lorem-unit">Unit</label><select id="sel-lorem-unit"><option value="paragraphs">Paragraphs</option><option value="sentences">Sentences</option><option value="words">Words</option></select></div>
+          <div class="field"><label for="inp-lorem-count">Count</label><input type="number" id="inp-lorem-count" min="1" max="50" value="3"></div>
+        </div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-lorem-run">Generate</button>
+          <button class="btn btn-secondary" id="btn-lorem-copy"><i class="fa-regular fa-copy" aria-hidden="true"></i> Copy</button>
+          <button class="btn btn-secondary" id="btn-lorem-reset">Reset</button>
+        </div>
+        <div class="field"><label for="out-lorem">Output</label><textarea id="out-lorem" rows="10" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+
+    <!-- 45 Text Reverser / Sorter -->
+    <section id="tool-text-sort" class="view tool" aria-labelledby="tool-text-sort-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-text-sort-title" class="tool-title"><i class="fa-solid fa-arrow-down-a-z" aria-hidden="true"></i> Text Reverser / Sorter</h2>
+      <details class="how"><summary>How to use</summary><p>Sort lines ascending or descending, or reverse the whole string.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-text-sort">Lines / Text</label><textarea id="inp-text-sort" rows="8"></textarea></div>
+        <div class="row wrap">
+          <button class="btn btn-secondary" id="btn-text-sort-asc">Sort A→Z</button>
+          <button class="btn btn-secondary" id="btn-text-sort-desc">Sort Z→A</button>
+          <button class="btn btn-secondary" id="btn-text-sort-reverse">Reverse string</button>
+          <button class="btn btn-secondary" id="btn-text-sort-reset">Reset</button>
+        </div>
+        <div class="field"><label for="out-text-sort">Output</label><textarea id="out-text-sort" rows="8" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ GROUP F — CALCULATORS ═══════════ -->
+
+    <!-- 46 Age Calculator -->
+    <section id="tool-age" class="view tool" aria-labelledby="tool-age-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-age-title" class="tool-title"><i class="fa-solid fa-cake-candles" aria-hidden="true"></i> Age Calculator</h2>
+      <details class="how"><summary>How to use</summary><p>Pick a date of birth to see your exact age and days until next birthday.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-age-dob">Date of birth</label><input type="date" id="inp-age-dob"></div>
+        <div class="row"><button class="btn btn-primary" id="btn-age-run">Calculate</button><button class="btn btn-secondary" id="btn-age-reset">Reset</button></div>
+        <div id="out-age" class="kv-table" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 47 BMI -->
+    <section id="tool-bmi" class="view tool" aria-labelledby="tool-bmi-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-bmi-title" class="tool-title"><i class="fa-solid fa-weight-scale" aria-hidden="true"></i> BMI Calculator</h2>
+      <details class="how"><summary>How to use</summary><p>Enter weight and height (metric or imperial) to get BMI and category.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="sel-bmi-unit">Units</label><select id="sel-bmi-unit"><option value="metric">Metric (kg / cm)</option><option value="imperial">Imperial (lb / in)</option></select></div>
+        <div class="row">
+          <div class="field"><label for="inp-bmi-weight">Weight</label><input type="number" id="inp-bmi-weight" min="1" step="0.1"></div>
+          <div class="field"><label for="inp-bmi-height">Height</label><input type="number" id="inp-bmi-height" min="1" step="0.1"></div>
+        </div>
+        <div class="row"><button class="btn btn-primary" id="btn-bmi-run">Calculate</button><button class="btn btn-secondary" id="btn-bmi-reset">Reset</button></div>
+        <div id="out-bmi" class="kv-table" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 48 EMI -->
+    <section id="tool-emi" class="view tool" aria-labelledby="tool-emi-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-emi-title" class="tool-title"><i class="fa-solid fa-indian-rupee-sign" aria-hidden="true"></i> EMI Calculator</h2>
+      <details class="how"><summary>How to use</summary><p>Enter principal, annual interest rate and tenure in months. EMI and a yearly summary appear below.</p></details>
+      <div class="tool-body">
+        <div class="row">
+          <div class="field"><label for="inp-emi-p">Principal</label><input type="number" id="inp-emi-p" min="0" step="1000"></div>
+          <div class="field"><label for="inp-emi-r">Annual rate %</label><input type="number" id="inp-emi-r" min="0" step="0.1"></div>
+          <div class="field"><label for="inp-emi-n">Tenure (months)</label><input type="number" id="inp-emi-n" min="1" step="1"></div>
+        </div>
+        <div class="row"><button class="btn btn-primary" id="btn-emi-run">Calculate</button><button class="btn btn-secondary" id="btn-emi-reset">Reset</button></div>
+        <div id="out-emi" class="kv-table" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 49 Percentage -->
+    <section id="tool-percent" class="view tool" aria-labelledby="tool-percent-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-percent-title" class="tool-title"><i class="fa-solid fa-percent" aria-hidden="true"></i> Percentage Calculator</h2>
+      <details class="how"><summary>How to use</summary><p>Three modes: X% of Y, X is what % of Y, and percentage change from X to Y.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="sel-percent-mode">Mode</label>
+          <select id="sel-percent-mode"><option value="of">X% of Y</option><option value="is">X is what % of Y</option><option value="change">% change X → Y</option></select>
+        </div>
+        <div class="row">
+          <div class="field"><label for="inp-percent-x">X</label><input type="number" id="inp-percent-x" step="any"></div>
+          <div class="field"><label for="inp-percent-y">Y</label><input type="number" id="inp-percent-y" step="any"></div>
+        </div>
+        <div class="row"><button class="btn btn-primary" id="btn-percent-run">Calculate</button><button class="btn btn-secondary" id="btn-percent-reset">Reset</button></div>
+        <div id="out-percent" class="kv-table" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 50 Currency Converter -->
+    <section id="tool-currency" class="view tool" aria-labelledby="tool-currency-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-currency-title" class="tool-title"><i class="fa-solid fa-money-bill-transfer" aria-hidden="true"></i> Currency Converter</h2>
+      <details class="how"><summary>How to use</summary><p>Offline converter using manual rates. Pick two of five currencies and enter a rate.</p></details>
+      <div class="tool-body">
+        <div class="row">
+          <div class="field"><label for="sel-currency-from">From</label><select id="sel-currency-from"><option>USD</option><option>EUR</option><option>GBP</option><option>INR</option><option>JPY</option></select></div>
+          <div class="field"><label for="sel-currency-to">To</label><select id="sel-currency-to"><option>EUR</option><option>USD</option><option>GBP</option><option>INR</option><option>JPY</option></select></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="inp-currency-amount">Amount</label><input type="number" id="inp-currency-amount" min="0" step="any"></div>
+          <div class="field"><label for="inp-currency-rate">Rate (1 From = ? To)</label><input type="number" id="inp-currency-rate" step="any"></div>
+        </div>
+        <div class="row"><button class="btn btn-primary" id="btn-currency-run">Convert</button><button class="btn btn-secondary" id="btn-currency-reset">Reset</button></div>
+        <div id="out-currency" class="kv-table" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 51 Unit Converter -->
+    <section id="tool-unit" class="view tool" aria-labelledby="tool-unit-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-unit-title" class="tool-title"><i class="fa-solid fa-ruler-combined" aria-hidden="true"></i> Unit Converter</h2>
+      <details class="how"><summary>How to use</summary><p>Choose a category, enter a value and select units.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="sel-unit-cat">Category</label>
+          <select id="sel-unit-cat"><option value="length">Length</option><option value="weight">Weight</option><option value="temp">Temperature</option><option value="area">Area</option><option value="volume">Volume</option></select>
+        </div>
+        <div class="row">
+          <div class="field"><label for="sel-unit-from">From</label><select id="sel-unit-from"></select></div>
+          <div class="field"><label for="sel-unit-to">To</label><select id="sel-unit-to"></select></div>
+        </div>
+        <div class="field"><label for="inp-unit-value">Value</label><input type="number" id="inp-unit-value" step="any"></div>
+        <div class="row"><button class="btn btn-primary" id="btn-unit-run">Convert</button><button class="btn btn-secondary" id="btn-unit-reset">Reset</button></div>
+        <div id="out-unit" class="kv-table" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 52 Password Generator -->
+    <section id="tool-password" class="view tool" aria-labelledby="tool-password-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-password-title" class="tool-title"><i class="fa-solid fa-key" aria-hidden="true"></i> Password Generator</h2>
+      <details class="how"><summary>How to use</summary><p>Adjust length and character sets, then generate. Strength is shown below.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="rng-password-len">Length <span id="val-password-len">16</span></label><input type="range" id="rng-password-len" min="6" max="64" value="16"></div>
+        <div class="field checkbox"><input type="checkbox" id="chk-password-upper" checked><label for="chk-password-upper">Uppercase</label></div>
+        <div class="field checkbox"><input type="checkbox" id="chk-password-lower" checked><label for="chk-password-lower">Lowercase</label></div>
+        <div class="field checkbox"><input type="checkbox" id="chk-password-num" checked><label for="chk-password-num">Numbers</label></div>
+        <div class="field checkbox"><input type="checkbox" id="chk-password-sym" checked><label for="chk-password-sym">Symbols</label></div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-password-run">Generate</button>
+          <button class="btn btn-secondary" id="btn-password-copy"><i class="fa-regular fa-copy" aria-hidden="true"></i> Copy</button>
+        </div>
+        <div class="field"><label for="out-password">Password</label><input type="text" id="out-password" readonly aria-live="polite"></div>
+        <p class="muted" id="out-password-strength" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 53 Random Number -->
+    <section id="tool-random" class="view tool" aria-labelledby="tool-random-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-random-title" class="tool-title"><i class="fa-solid fa-dice" aria-hidden="true"></i> Random Number Generator</h2>
+      <details class="how"><summary>How to use</summary><p>Pick min, max and how many numbers. Optionally avoid repeats.</p></details>
+      <div class="tool-body">
+        <div class="row">
+          <div class="field"><label for="inp-random-min">Min</label><input type="number" id="inp-random-min" value="1"></div>
+          <div class="field"><label for="inp-random-max">Max</label><input type="number" id="inp-random-max" value="100"></div>
+          <div class="field"><label for="inp-random-count">Count</label><input type="number" id="inp-random-count" value="5" min="1" max="1000"></div>
+        </div>
+        <div class="field checkbox"><input type="checkbox" id="chk-random-norepeat"><label for="chk-random-norepeat">No repeats</label></div>
+        <div class="row"><button class="btn btn-primary" id="btn-random-run">Generate</button><button class="btn btn-secondary" id="btn-random-reset">Reset</button></div>
+        <div class="field"><label for="out-random">Numbers</label><textarea id="out-random" rows="4" aria-live="polite"></textarea></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ GROUP G — UTILITIES ═══════════ -->
+
+    <!-- 54 Stopwatch -->
+    <section id="tool-stopwatch" class="view tool" aria-labelledby="tool-stopwatch-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-stopwatch-title" class="tool-title"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i> Stopwatch</h2>
+      <details class="how"><summary>How to use</summary><p>Start, pause and reset. Lap records each interval.</p></details>
+      <div class="tool-body">
+        <div class="stopwatch-display" id="out-stopwatch" aria-live="polite">00:00.000</div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-stopwatch-start">Start</button>
+          <button class="btn btn-secondary" id="btn-stopwatch-pause">Pause</button>
+          <button class="btn btn-secondary" id="btn-stopwatch-lap">Lap</button>
+          <button class="btn btn-danger" id="btn-stopwatch-reset">Reset</button>
+        </div>
+        <ol id="out-stopwatch-laps" class="lap-list" aria-live="polite"></ol>
+      </div>
+    </section>
+
+    <!-- 55 Countdown Timer -->
+    <section id="tool-timer" class="view tool" aria-labelledby="tool-timer-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-timer-title" class="tool-title"><i class="fa-solid fa-hourglass-half" aria-hidden="true"></i> Countdown Timer</h2>
+      <details class="how"><summary>How to use</summary><p>Set HH:MM:SS, click Start. A beep plays when it finishes.</p></details>
+      <div class="tool-body">
+        <div class="row">
+          <div class="field"><label for="inp-timer-h">HH</label><input type="number" id="inp-timer-h" min="0" max="99" value="0"></div>
+          <div class="field"><label for="inp-timer-m">MM</label><input type="number" id="inp-timer-m" min="0" max="59" value="1"></div>
+          <div class="field"><label for="inp-timer-s">SS</label><input type="number" id="inp-timer-s" min="0" max="59" value="0"></div>
+        </div>
+        <div class="stopwatch-display" id="out-timer" aria-live="polite">00:01:00</div>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-timer-start">Start</button>
+          <button class="btn btn-secondary" id="btn-timer-pause">Pause</button>
+          <button class="btn btn-danger" id="btn-timer-reset">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 56 Notepad -->
+    <section id="tool-notepad" class="view tool" aria-labelledby="tool-notepad-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-notepad-title" class="tool-title"><i class="fa-solid fa-note-sticky" aria-hidden="true"></i> Notepad</h2>
+      <details class="how"><summary>How to use</summary><p>Your notes autosave to this browser's localStorage. Export as .txt at any time.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-notepad">Notes</label><textarea id="inp-notepad" rows="12" aria-live="polite"></textarea></div>
+        <div class="row">
+          <button class="btn btn-secondary" id="btn-notepad-clear">Clear</button>
+          <button class="btn btn-secondary" id="btn-notepad-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Export .txt</button>
+        </div>
+        <p class="muted" id="out-notepad-status" aria-live="polite">Autosaved locally.</p>
+      </div>
+    </section>
+
+    <!-- 57 To-Do -->
+    <section id="tool-todo" class="view tool" aria-labelledby="tool-todo-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-todo-title" class="tool-title"><i class="fa-solid fa-list-check" aria-hidden="true"></i> To-Do List</h2>
+      <details class="how"><summary>How to use</summary><p>Add tasks, mark them done or delete them. Everything is saved in localStorage.</p></details>
+      <div class="tool-body">
+        <div class="row">
+          <div class="field grow"><label for="inp-todo">New task</label><input type="text" id="inp-todo" placeholder="What needs doing?"></div>
+          <button class="btn btn-primary" id="btn-todo-add">Add</button>
+        </div>
+        <ul id="out-todo" class="todo-list" aria-live="polite"></ul>
+      </div>
+    </section>
+
+    <!-- 58 Color Picker / Palette -->
+    <section id="tool-palette" class="view tool" aria-labelledby="tool-palette-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-palette-title" class="tool-title"><i class="fa-solid fa-palette" aria-hidden="true"></i> Color Picker &amp; Palette</h2>
+      <details class="how"><summary>How to use</summary><p>Pick a colour to see its shades and a complementary colour.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-palette-color">Base colour</label><input type="color" id="inp-palette-color" value="#2563eb"></div>
+        <div class="row"><button class="btn btn-primary" id="btn-palette-run">Build palette</button></div>
+        <div id="out-palette" class="palette-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 59 Camera Capture -->
+    <section id="tool-camera" class="view tool" aria-labelledby="tool-camera-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-camera-title" class="tool-title"><i class="fa-solid fa-camera" aria-hidden="true"></i> Camera Photo Capture</h2>
+      <details class="how"><summary>How to use</summary><p>Click Start camera, allow access, then Capture to grab a frame and download it.</p></details>
+      <div class="tool-body">
+        <video id="video-camera" autoplay playsinline muted class="preview-canvas"></video>
+        <div class="row">
+          <button class="btn btn-primary" id="btn-camera-start">Start camera</button>
+          <button class="btn btn-secondary" id="btn-camera-capture">Capture</button>
+          <button class="btn btn-secondary" id="btn-camera-stop">Stop</button>
+          <button class="btn btn-secondary" id="btn-camera-download"><i class="fa-solid fa-download" aria-hidden="true"></i> Download PNG</button>
+        </div>
+        <canvas id="canvas-camera" class="preview-canvas" hidden></canvas>
+      </div>
+    </section>
+
+    <!-- 60 File Hash -->
+    <section id="tool-hash" class="view tool" aria-labelledby="tool-hash-title">
+      <button class="btn btn-ghost back-btn" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+      <h2 id="tool-hash-title" class="tool-title"><i class="fa-solid fa-fingerprint" aria-hidden="true"></i> File Hash Generator</h2>
+      <details class="how"><summary>How to use</summary><p>Upload any file to compute MD5, SHA-1 and SHA-256 hashes with CryptoJS.</p></details>
+      <div class="tool-body">
+        <div class="field"><label for="inp-hash-file">File</label><input type="file" id="inp-hash-file"></div>
+        <div class="row"><button class="btn btn-primary" id="btn-hash-run">Compute</button><button class="btn btn-secondary" id="btn-hash-reset">Reset</button></div>
+        <div id="out-hash" class="kv-table" aria-live="polite"></div>
+      </div>
+     </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> All-in-One Tools. Client-side only — nothing is uploaded.</p>
+      <nav aria-label="Footer">
+        <a href="#home">All tools</a>
+        <button class="link-btn" id="open-info">About &amp; Privacy</button>
+      </nav>
+    </div>
+  </footer>
+
+  <dialog id="modal-info" aria-labelledby="modal-info-title">
+    <h2 id="modal-info-title">About &amp; Privacy</h2>
+    <p>Every tool on this site runs entirely in your browser. Files never leave your device — there is no backend, no tracking of your content, and no accounts.</p>
+    <p>Heavy engines (OCR, PDF, QR scanning) are loaded from public CDNs on first use. An internet connection is required only for those CDN assets and the initial page load.</p>
+    <form method="dialog"><button class="btn btn-primary">Close</button></form>
+  </dialog>
+
+  <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
